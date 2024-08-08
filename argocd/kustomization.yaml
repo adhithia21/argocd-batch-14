@@ -1,0 +1,5 @@
+resources:
+  - backoffice.yaml
+  - payments.yaml
+  - products.yaml
+  - transactions.yaml
