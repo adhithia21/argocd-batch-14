@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: products
 spec:
-  replicas: 3
   selector:
     app: products
   ports:
