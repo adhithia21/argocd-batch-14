@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: backoffice
+  namespace: argocd
+spec:
+  destination:
+    name: ''
+    namespace: dev-backoffice-ns
+    server: https://kubernetes.default.svc
+  source:
+    path: backoffice
+    repoURL: https://github.com/adhithia21/argocd-batch-14.git
+    targetRevision: HEAD
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: false
+    syncOptions:
+      - CreateNamespace=true

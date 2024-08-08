@@ -1,0 +1,11 @@
+resources:
+  - deployment.yaml
+  - services.yaml
+
+configMapGenerator:
+  - name: backoffice-config
+    literals:
+      - DB_HOST=xxx.xxx.xxx.xxx
+      - DB_USER=root
+      - DB_PASSWORD=Admin
+      - DB_NAME=backoffice
